@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código QR para archivo</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+<body>
+
+    <h1>Escanea el código QR para ver el archivo</h1>
+
+    <div id="qrcode"></div>
+
+    <script>
+        // URL del archivo que deseas que sea accesible a través del código QR
+        var fileUrl = "https://www.example.com/mi-archivo.pdf"; // Cambia esta URL por la del archivo
+
+        // Generar el código QR
+        QRCode.toCanvas(document.getElementById('qrcode'), fileUrl, function(error) {
+            if (error) console.error(error);
+            console.log("¡Código QR generado!");
+        });
+    </script>
+
+</body>
+</html>
